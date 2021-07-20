@@ -1,0 +1,6 @@
+name: poc-project
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Minimal project created for conducting the POC of Pulumi as a iac tool

@@ -1,0 +1,3 @@
+config:
+  gcp:project: PG-DevOps
+  gcp:region: us-central1
