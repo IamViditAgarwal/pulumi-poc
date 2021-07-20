@@ -37,7 +37,6 @@ def pg_bucket(bkt_name):
 def pg_bucket_invoker(bucket_args):
   for _ in bucket_args:
     created_bkt = pg_bucket(_.get('name'))
-
     # Export the DNS name of the bucket
     pulumi.export(f"{_['name']}-id", created_bkt.id)
     # pulumi.export(, created_bkt.id)
@@ -49,6 +48,9 @@ global_bucket_args = [
   },
   {
     'name': 'static-site123'
+  },
+  {
+    'name': 'static-site12'
   }
 ]
 
