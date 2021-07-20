@@ -3,7 +3,7 @@ on:
   - pull_request
 jobs:
   preview:
-    name: Preview
+    name: Pulumi Preview
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
