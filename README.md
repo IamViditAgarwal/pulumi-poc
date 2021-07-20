@@ -1,6 +1,6 @@
 ## Pulumi POC
 ---
-Repo created for doing the POC for the Pulumi
+Repo created for doing the POC for the Pulumi IAC Tool
 
 ## Steps Followed
 * We are authenticating the pulumi with the gcp in the non-interactive manner using the IAM Service account approach . Created the custom service account and have generated the json keys for the same .
