@@ -48,6 +48,9 @@ global_bucket_args = [
   },
   {
     'name': 'static-site123'
+  },
+  {
+    'name': 'static-site12'
   }
 ]
 
