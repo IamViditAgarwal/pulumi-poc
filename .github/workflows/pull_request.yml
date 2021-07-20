@@ -17,13 +17,15 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
       - run: pip install -r iac/requirements.txt
-      - uses: pulumi/actions@v2
+      - name: Pulumi Preview
+        uses: pulumi/actions@v3
         with:
           command: preview
           stack-name: poc
           work-dir: ./iac/
           diff: true
-          # comment-on-pr: true
-          # github-token: ${{ secrets.GITHUB_TOKEN }}
+          comment-on-pr: true
+          upsert: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
